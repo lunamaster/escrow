@@ -5,6 +5,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { PropiedadesComponent } from './propiedades/propiedades.component';
 import { EscrowComponent } from './escrow/escrow.component';
+import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path: 'clientes', component: ClientesComponent },
       { path: 'propiedades', component: PropiedadesComponent },
       { path: 'escrow', component: EscrowComponent },
+      { path: 'crear-cliente', component: CrearClienteComponent },
     ]
   }
 ];

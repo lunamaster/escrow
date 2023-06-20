@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
 
 //Angular material
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -10,12 +12,17 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSelectModule } from '@angular/material/select';
 
 
 //Modulos
 import { ReactiveFormsModule } from '@angular/forms';
-
-
 
 
 @NgModule({
@@ -30,7 +37,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatProgressSpinnerModule,
     ReactiveFormsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    MatTableModule,
+    MatTooltipModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCardModule,
+    MatGridListModule,
+    MatSelectModule
   ],
   exports: [
     MatSlideToggleModule,
@@ -41,7 +56,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatProgressSpinnerModule,
     ReactiveFormsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatTooltipModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCardModule,
+    MatGridListModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

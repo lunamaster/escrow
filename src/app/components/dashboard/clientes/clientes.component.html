@@ -1,1 +1,64 @@
-<p>clientes works!</p>
+<div class="container">
+  <mat-toolbar>
+    <span>Clientes</span>
+    <div class="example-spacer"></div>
+    <button mat-raised-button color="primary" routerLink="/dashboard/crear-cliente">Agregar</button>
+  </mat-toolbar>
+
+  <div *ngIf="listClientes.length>0">
+    <!-- Filtro de la tabla -->
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input autocomplete="off">
+    </mat-form-field>
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+        <!-- Position Column -->
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="apellidoPat">
+          <th mat-header-cell *matHeaderCellDef> Apellido Paterno </th>
+          <td mat-cell *matCellDef="let element"> {{element.apellidoPat}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="apellidoMat">
+          <th mat-header-cell *matHeaderCellDef> Apellido Materno</th>
+          <td mat-cell *matCellDef="let element"> {{element.apellidoMat}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="sexo">
+          <th mat-header-cell *matHeaderCellDef> Sexo </th>
+          <td mat-cell *matCellDef="let element"> {{element.sexo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element; let i=index" style="text-align: right;">
+            <!-- Seccion de Iconos -->
+            <a class="pointer" style="color: #1878b0;" matTooltip="Ver Cliente">
+              <mat-icon>search</mat-icon>
+            </a>
+            <a class="pointer" style="color: #1f516f;" matTooltip="Editar Cliente">
+              <mat-icon>edit</mat-icon>
+            </a>
+            <a class="pointer" (click)="eliminarCliente(i)" style="color: #e15639;" matTooltip="Eliminar Cliente">
+              <mat-icon>delete</mat-icon>
+            </a>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+  </div>
+  <h2 *ngIf="listClientes.length==0">Sin registros</h2>
+</div>

@@ -1,0 +1,18 @@
+[
+  {
+    "nombre": "Dashboard",
+    "redirect": "/dashboard"
+  },
+  {
+    "nombre": "Clientes",
+    "redirect": "/dashboard/clientes"
+  },
+  {
+    "nombre": "Propiedades",
+    "redirect": "/dashboard/propiedades"
+  },
+  {
+    "nombre": "Escrow",
+    "redirect": "/dashboard/escrow"
+  }
+]

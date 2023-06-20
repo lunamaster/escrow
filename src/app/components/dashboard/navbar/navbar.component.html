@@ -2,15 +2,10 @@
   <span>
     <img src="../../../../assets/img/escrow/escrow_1.png" height="50">
   </span>
-
   <span class="example-spacer"></span>
-  <button mat-button routerLink="/dashboard">Clientes</button>
-  <button mat-button routerLink="/dashboard/propiedades">Propiedades</button>
-  <button mat-button routerLink="/dashboard/escrow">Escrow</button>
+  <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</button>
   <span class="example-spacer"></span>
-
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button routerLink="/logout" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>logout</mat-icon>
   </button>
-
 </mat-toolbar>

@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { PropiedadesComponent } from './propiedades/propiedades.component';
 import { EscrowComponent } from './escrow/escrow.component';
+import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { EscrowComponent } from './escrow/escrow.component';
     NavbarComponent,
     ClientesComponent,
     PropiedadesComponent,
-    EscrowComponent
+    EscrowComponent,
+    CrearClienteComponent
   ],
   imports: [
     CommonModule,
