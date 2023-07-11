@@ -10,6 +10,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { PropiedadesComponent } from './propiedades/propiedades.component';
 import { EscrowComponent } from './escrow/escrow.component';
 import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
+import { CrearPropiedadesComponent } from './propiedades/crear-propiedades/crear-propiedades.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.co
     ClientesComponent,
     PropiedadesComponent,
     EscrowComponent,
-    CrearClienteComponent
+    CrearClienteComponent,
+    CrearPropiedadesComponent
   ],
   imports: [
     CommonModule,

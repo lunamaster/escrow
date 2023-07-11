@@ -6,6 +6,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { PropiedadesComponent } from './propiedades/propiedades.component';
 import { EscrowComponent } from './escrow/escrow.component';
 import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
+import { CrearPropiedadesComponent } from './propiedades/crear-propiedades/crear-propiedades.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'propiedades', component: PropiedadesComponent },
       { path: 'escrow', component: EscrowComponent },
       { path: 'crear-cliente', component: CrearClienteComponent },
+      { path: 'crear-propiedades', component: CrearPropiedadesComponent },
     ]
   }
 ];
